@@ -7,7 +7,8 @@ describe('Header component', () => {
     it('should render a React Session text', () => {
         const headerComponent = shallow(<Header/>);
 
-        expect(headerComponent.exists()).toBe(true);
+        expect(headerComponent.find('header').exists()).toBe(true);
+        expect(headerComponent.find('h1').exists()).toBe(true);
         expect(headerComponent.find('h1').text()).toBe('React Session');
     });
 
