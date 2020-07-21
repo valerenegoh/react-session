@@ -1,3 +1,56 @@
-.App {
+.app {
   text-align: center;
+}
+
+.content {
+  margin-left: 20px;
+  margin-right: 20px;  
+}
+
+.content * {  
+  margin-bottom: 10px;
+  font-family: Open Sans;
+}
+
+.content h1, h2, h3, h4, label {
+  display: block;
+  text-align: left;
+  color: #404040;
+}
+
+input {
+  display: block;
+  border: 1px solid #cdcdcd;
+  border-radius: 4px;
+  width: 100%;
+  height: 25px;
+}
+
+button, [type=button] {
+  display: block;
+  border: 1px solid #0366ee;
+  border-radius: 4px;
+  background: #0366ee;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  width: 100px;
+  height: 35px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+table {
+  border-spacing: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+th, td {
+  border-bottom: 2px solid#dedede;
+  text-align: left;
+  padding: .5rem;
+  color: #404040;
 }
