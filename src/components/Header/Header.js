@@ -5,7 +5,7 @@ import './Header.css';
 and not as a class, as it is a simple component, 
 it does not have a State. */
 class Header extends React.Component {
-    render() {
+    render = () => {
         return (
             <header className="app-header">
                 <h1>React Session</h1>
