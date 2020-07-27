@@ -3,7 +3,7 @@
 ## Resources to Learn React
 
 #### Important Concepts
-* [Self Learning Material](put_link_here)
+* [Self Learning Material](https://drive.google.com/drive/folders/1Izy53XSNmphII0NWkGDH5URB91qkgvA0)
 
 #### Official React Resources
 * [React Documentation](https://reactjs.org/)
