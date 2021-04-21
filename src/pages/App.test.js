@@ -1,11 +1,11 @@
 import React from 'react';
 import App from './App';
-import { mount } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 
-describe('App component', () => {
+describe('App', () => {
     it('should render a header', () => {
-        const app = mount(<App/>);
+        render(<App/>);
 
-        expect(app.find('header').exists()).toBe(true);
+        expect(screen.getByText('React Session')).toBeTruthy();
     });
 });
