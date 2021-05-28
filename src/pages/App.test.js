@@ -8,4 +8,10 @@ describe('App', () => {
 
         expect(screen.getByText('React Session')).toBeTruthy();
     });
+
+    it('should render form', function () {
+        render(<App/>);
+
+        expect(screen.getByText("Add team member")).toBeInTheDocument();
+    });
 });
