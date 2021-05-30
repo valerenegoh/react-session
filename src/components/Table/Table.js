@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Table = (props) => {
-    console.log(props);
+
     return (
         <div>
             <h1>Existing team members</h1>

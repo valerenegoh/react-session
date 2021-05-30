@@ -10,13 +10,24 @@ class App extends React.Component {
     }
 
     addMember = (teamMember) => {
-        this.setState({
-            teamMembers: [...this.state.teamMembers, teamMember]
-        })
+        if(this.validateFields(teamMember)) {
+            this.setState({
+                teamMembers: [...this.state.teamMembers, teamMember]
+            })
+        }
+    }
+
+    validateFields = (teamMember) => {
+        for (let key of Object.keys(teamMember)) {
+            if (!teamMember[key].trim()) {
+                return false;
+            }
+        }
+        return true;
     }
 
   render = () => {
-        console.log(this.state.teamMembers);
+
     return (
       <div className="app">
         <Header></Header>
