@@ -19,6 +19,9 @@ describe('App', () => {
         render(<App/>);
 
         expect(screen.getByText("Existing team members")).toBeInTheDocument();
+        screen.getAllByRole("textbox").map((item) => {
+            expect(item.value).toEqual("");
+        });
     });
 
     it("should render submitted name and role when button is clicked", async () => {
