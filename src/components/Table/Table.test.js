@@ -5,11 +5,13 @@ import Table from "./Table";
 describe('Table', function () {
     it('should render title', () => {
         render(<Table entries={[]}/>);
+
         expect(screen.getByText("Existing team members")).toBeInTheDocument();
     });
 
     it('should render Name and Role headers', () => {
         render(<Table entries={[]}/>);
+
         expect(screen.getByText("Name")).toBeInTheDocument();
         expect(screen.getByText("Role")).toBeInTheDocument();
     });
