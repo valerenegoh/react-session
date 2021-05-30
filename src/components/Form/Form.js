@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
+import InputField from "../InputField/InputField";
 
 const initialState = {
-    name: "",
-    role: ""
+    Name: "",
+    Role: ""
 };
 
 class Form extends Component {
@@ -15,9 +16,7 @@ class Form extends Component {
         this.setState(initialState)
     }
 
-    onChange= (event) => {
-         const { name, value } = event.target;
-
+    onChange = (name, value) => {
          this.setState({
              [name]: value
          })
@@ -27,14 +26,9 @@ class Form extends Component {
         return (
             <form onSubmit={this.onSubmit}>
                 <h1>Add team member</h1>
-                <label>
-                    <span>Name</span>
-                    <input value={this.state.name} name={"name"} onChange={this.onChange}/>
-                </label>
-                <label>
-                    <span>Role</span>
-                    <input value={this.state.role} name={"role"} onChange={this.onChange}/>
-                </label>
+                { Object.keys(this.state).map((key, i) => (
+                    <InputField key={i} name={key} value={this.state[key]} onChange={this.onChange}/>
+                ))}
                 <button>Submit</button>
             </form>
         );
