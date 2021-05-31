@@ -41,4 +41,22 @@ describe('App', () => {
         expect(screen.getByText(entry.name)).toBeInTheDocument();
         expect(screen.getByText(entry.role)).toBeInTheDocument();
     });
+
+    it("should not render name and role when field is empty and button is clicked", async () => {
+        render(<App/>);
+
+        const entry = {
+            name: " ",
+            role: " "
+        }
+
+        fireEvent.change(screen.getByLabelText("Name"), { target: {value: entry.name}});
+        fireEvent.change(screen.getByLabelText("Role"), { target: {value: entry.role}});
+
+        await waitFor(() => {
+            fireEvent.submit(screen.getByRole("button", { name: "Submit"}));
+        });
+
+        expect(screen.getAllByRole('row').length).toEqual(1);
+    });
 });

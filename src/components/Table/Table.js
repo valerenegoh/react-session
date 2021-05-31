@@ -15,8 +15,8 @@ const Table = (props) => {
                 <tbody>
                     {props.entries.map((item, i) => (
                         <tr key={i}>
-                            <td>{item.Name}</td>
-                            <td>{item.Role}</td>
+                            <td>{item.name}</td>
+                            <td>{item.role}</td>
                         </tr>
                     ))}
                 </tbody>
