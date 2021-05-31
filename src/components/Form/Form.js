@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import InputField from "../InputField/InputField";
 
 const initialState = {
-    Name: "",
-    Role: ""
+    name: "",
+    role: ""
 };
 
 class Form extends Component {
@@ -26,9 +26,8 @@ class Form extends Component {
         return (
             <form onSubmit={this.onSubmit}>
                 <h1>Add team member</h1>
-                { Object.keys(this.state).map((key, i) => (
-                    <InputField key={i} name={key} value={this.state[key]} onChange={this.onChange}/>
-                ))}
+                <InputField label={"Name"} value={this.state.name} name={"name"} onChange={this.onChange}/>
+                <InputField label={"Role"} value={this.state.role} name={"role"} onChange={this.onChange}/>
                 <button>Submit</button>
             </form>
         );

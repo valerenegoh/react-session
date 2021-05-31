@@ -9,7 +9,7 @@ const InputField = (props) => {
     return (
         <div>
             <label>
-                <span>{props.name}</span>
+                <span>{props.label}</span>
                 <input value={props.value} onChange={onChange}/>
             </label>
         </div>
