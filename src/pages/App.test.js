@@ -26,6 +26,7 @@ describe('App', () => {
 
     it("should render submitted name and role when button is clicked", async () => {
         render(<App/>);
+
         const entry = {
             name: "Angie",
             role: "Dev"

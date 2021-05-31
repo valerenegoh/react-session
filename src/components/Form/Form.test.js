@@ -25,10 +25,10 @@ describe('Form', function () {
 
     it("should clear all input boxes when button is clicked", async () => {
         render(<Form onSubmit={() => {}}/>);
+
         const nameInput = screen.getByLabelText("Name");
         const roleInput = screen.getByLabelText("Role");
         const submitButton = screen.getByRole("button", { name: "Submit"});
-
 
         fireEvent.change(nameInput, { target: {value: "Angie"}});
         fireEvent.change(roleInput, { target: {value: "Dev"}});
